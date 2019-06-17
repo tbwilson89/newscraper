@@ -74,7 +74,7 @@ app.post("/scrape", function(req, res) {
       db.Article.findOneAndUpdate({title: result.title}, result, {upsert: true, new: true, useFindAndModify: false})
         .then(function(dbArticle) {
           // View the added result in the console
-          //console.log(dbArticle);
+          console.log(dbArticle);
         })
         .catch(function(err) {
           // If an error occurred, log it
